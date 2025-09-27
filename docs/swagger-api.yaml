@@ -8,11 +8,9 @@ info:
   license:
     name: MIT
 servers:
-  - url: https://api.hirespace.com/v1
+  - url: https://hirepsace.blockhaven.net/api/
     description: Production server
-  - url: https://staging-api.hirespace.com/v1
-    description: Staging server
-  - url: http://localhost:3000/v1
+  - url: http://localhost:8000/api
     description: Development server
 
 paths:
