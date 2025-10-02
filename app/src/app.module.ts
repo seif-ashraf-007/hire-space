@@ -4,6 +4,10 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UsersModule } from './users/users.module';
 import { User } from './users/entities/user.entity';
+import { SpacesModule } from './spaces/spaces.module';
+import { BookingsModule } from './bookings/bookings.module';
+import { RoomsModule } from './rooms/rooms.module';
+import { PaymentsModule } from './payments/payments.module';
 
 @Module({
   imports: [
@@ -26,6 +30,10 @@ import { User } from './users/entities/user.entity';
       }),
     }),
     UsersModule,
+    SpacesModule,
+    BookingsModule,
+    RoomsModule,
+    PaymentsModule,
   ],
   controllers: [],
   providers: [],
