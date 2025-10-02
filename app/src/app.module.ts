@@ -8,6 +8,10 @@ import { SpacesModule } from './spaces/spaces.module';
 import { BookingsModule } from './bookings/bookings.module';
 import { RoomsModule } from './rooms/rooms.module';
 import { PaymentsModule } from './payments/payments.module';
+import { Space } from './spaces/entities/space.entity';
+import { Room } from './rooms/entities/room.entity';
+import { Booking } from './bookings/entities/booking.entity';
+import { Payment } from './payments/entities/payment.entity';
 
 @Module({
   imports: [
@@ -26,7 +30,7 @@ import { PaymentsModule } from './payments/payments.module';
         port: configService.get('DB_PORT'),
         host: configService.get('DB_HOST'),
         synchronize: process.env.NODE_ENV !== 'production' ? true : false,
-        entities: [User],
+        entities: [User, Space, Room, Booking, Payment],
       }),
     }),
     UsersModule,
