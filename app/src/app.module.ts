@@ -18,7 +18,7 @@ import { Payment } from './payments/entities/payment.entity';
     HealthModule,
     ConfigModule.forRoot({
       isGlobal: true,
-      envFilePath: `.env.${process.env.NODE_ENV || 'development'}`,
+      envFilePath: `.env.${process.env.NODE_ENV || 'production'}`,
     }),
     TypeOrmModule.forRootAsync({
       inject: [ConfigService],
